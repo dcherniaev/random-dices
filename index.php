@@ -1,14 +1,16 @@
-
 <html>
 <head>
     <title>random-dices</title>
 </head>
 <body>
-
-<br>
 <form action="/roll.php" method="post">
-    <label for="qty">Dices: </label><input type="text" name="qty">
-    <br>
+    <select name = "qty">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    x
     <select name = "dice">
         <option value="4">d4</option>
         <option value="6">d6</option>

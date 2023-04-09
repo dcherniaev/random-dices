@@ -1,8 +1,8 @@
 <?php
-$post_qty = $_POST['qty'];
-$post_dice = $_POST['dice'];
+$qty = $_POST['qty'];
+$dice = $_POST['dice'];
 
-switch ($post_dice){
+switch ($dice){
     case 4:
         $dice = 4;
         break;
@@ -24,4 +24,10 @@ switch ($post_dice){
     default:
         return "Choose a dice";
 }
-
+$sum = 0;
+for ($i = 1; $i <= $qty; $i++){
+    $value = rand(1, $dice);
+    $sum += $value;
+    echo $i . "st d" . $dice . " : " . $value . "<br>";
+}
+echo "Total: " . $sum . " points";
